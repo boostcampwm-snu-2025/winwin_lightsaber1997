@@ -1,0 +1,73 @@
+## Project Structure
+Key Directories
+
+app/
+
+This is the App Router in Next.js 13+.
+
+Contains layout.tsx (global layout), page.tsx (main route), and other folders for different routes.
+
+Each subfolder represents a route, for example: app/dashboard/page.tsx → /dashboard.
+
+components/
+
+Stores all reusable UI components.
+
+Usually includes a subfolder called components/ui/ (the shadcn/ui components).
+
+You can also create your own folders like components/custom/ for your app-specific components.
+
+To change how your app looks, you usually edit files in components/ui/.
+
+hooks/
+
+Contains custom React hooks.
+
+Examples: useTheme(), useToast(), useMediaQuery(), useUserSession().
+
+Used for logic that’s reusable but not UI-related.
+
+lib/
+
+Utility and configuration helpers.
+
+Commonly includes helper functions (like cn()), constants, and API clients.
+
+Example: lib/utils.ts defines helper utilities used across your components.
+
+public/
+
+Contains static assets (images, icons, etc.).
+
+Anything here is publicly available at your site’s root URL (e.g. /logo.svg).
+
+styles/
+
+Holds your global styles (Tailwind setup).
+
+Usually includes globals.css with @tailwind base, components, and utilities.
+
+You can modify global theme colors, fonts, or animations here.
+
+Configuration Files
+
+.next/ → Build output folder (auto-generated, don’t edit manually).
+
+next.config.mjs → Next.js configuration (images, experimental settings, etc.).
+
+tsconfig.json → TypeScript compiler configuration and path aliases.
+
+postcss.config.mjs → Enables Tailwind and Autoprefixer.
+
+components.json → Configuration file for shadcn/ui component generator.
+
+package.json → Lists dependencies and scripts.
+
+.gitignore → Specifies which files Git should ignore (node_modules, .next, etc.).
+
+
+## detail on lib folder Structure
+    lib
+        http
+        services
+        utils
